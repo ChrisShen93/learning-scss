@@ -1,0 +1,30 @@
+/**
+ * 按钮样式
+ * @authors ChrisShen93 (chrisshen93@gmail.com)
+ * @date    2016-12-05 14:03:21
+ * @version $Id$
+ */
+
+@charset "UTF-8";
+
+@mixin display-inline-block {
+    display: inline-block;
+}
+
+.button {
+    @include display-inline-block;
+}
+
+.button-group {
+    padding: 0 24px -1px;
+    border-radius: 0;
+
+    .button {
+        &:first-child {
+            border-radius: 3px 0 0 3px;
+        }
+        &:last-child {
+            border-radius: 0 3px 3px 0;
+        }
+    }
+}
